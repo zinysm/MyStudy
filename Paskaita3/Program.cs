@@ -232,6 +232,11 @@
 //    Console.WriteLine("Negalima sudaryti trikampio");
 //}
 
+using System;
+using System.Numerics;
+double basket1Price=0;
+double basket2Price=0;
+double totalPriceDiscount=0;
 string product1 = "Obuolys";
 int price1 = 3;
 string product2 = "duona";
@@ -243,10 +248,52 @@ Console.WriteLine(product2 + " " + price2 + " eur");
 Console.WriteLine(product3 + " " + price3 + " eur");
 Console.WriteLine("Įveskite produktą 1");
 string basket1 = Console.ReadLine();
+if ((basket1 == product1 || basket1 == product2 || basket1 == product3))
+{
+    if (basket1 == product1)
+    {
+        basket1Price = price1;
+    }
+    else if (basket1 == product2)
+    {
+        basket1Price = price2;
+    }
+    else if (basket1 == product3)
+    {
+        basket1Price = price3;
+    }
+    else
+    {
+        Console.WriteLine("Įvedėte netesingą produktą");
+    }
+}
 Console.WriteLine("Įveskite produktą 2");
 string basket2 = Console.ReadLine();
-Console.WriteLine("Įveskite produktą 2");
-string discountInput = Console.ReadLine();
+    if (basket2 == product1)
+    {
+        basket2Price = price1;
+    }
+    else if (basket2 == product2)
+    {
+        basket2Price = price2;
+    }
+    else if (basket2 == product3)
+    {
+        basket2Price = price3;
+    }
+    else
+    {
+        Console.WriteLine("Įvedėte netesingą produktą");
+    }
+double totalPrice = 0;
+if (basket1 == basket2)
+{
+        totalPrice = (basket1Price + basket2Price) *0.9;
+}
+else
+{
+    totalPrice = (basket1Price + basket2Price);
+}
 bool discount = false;
 Console.WriteLine("Ar turite kortele> Y/N");
 string discountInput = Console.ReadLine();
@@ -255,17 +302,16 @@ if (discountInput == "Y")
     discount = true;
 }
 
-if (( basket1 == product1 || basket1 == product2 || basket1 == product3) && ((basket2 == product1 || basket2 == product2 || basket2 == product3)))
+if (discount)
 {
-    if (discount)
-    {
-        //Apply discount 10%
-    }
-    else
-    {
-
-    }
+    totalPriceDiscount = totalPrice * 0.9;
 }
+else
+{
+    totalPriceDiscount = totalPrice;
+}
+Console.WriteLine(totalPriceDiscount);
+
 
 
 

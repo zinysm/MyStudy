@@ -1,59 +1,59 @@
-﻿//override firstline
-string firstLine = "vienas";
-string secondLine = "du";
-string thirdLine = firstLine + secondLine;
-Console.WriteLine(firstLine);
-firstLine = firstLine + secondLine;
-Console.WriteLine(firstLine);
-Console.WriteLine(thirdLine);
+﻿////override firstline
+//string firstLine = "vienas";
+//string secondLine = "du";
+//string thirdLine = firstLine + secondLine;
+//Console.WriteLine(firstLine);
+//firstLine = firstLine + secondLine;
+//Console.WriteLine(firstLine);
+//Console.WriteLine(thirdLine);
 
 
 
 
-//cw = Console.WriteLine()
+////cw = Console.WriteLine()
 
-///////////////////////////////////////////////////////
-
-
-//priskiriame eilutę kintamajui
-
-string city = "Vilnius";
-
-//kviečiame eilutė parametrą
-int wordLength = "Vilnius".Length;
+/////////////////////////////////////////////////////////
 
 
-// kviečiame string kintamojo
+////priskiriame eilutę kintamajui
 
-int wordLength2 = city.Length;
+//string city = "Vilnius";
 
-Console.WriteLine(wordLength);
-Console.WriteLine(wordLength2);
+////kviečiame eilutė parametrą
+//int wordLength = "Vilnius".Length;
 
-string city1 = "T";
-string city2 = "CodeAcademy";
-char myChar = city2[1];
-char myChar1 = city1[0];
-Console.WriteLine(myChar);
-Console.WriteLine(myChar1);
 
-int lastIndex = city2.Length - 1;
+//// kviečiame string kintamojo
 
-char lastChar = city2[city2.Length-1];
+//int wordLength2 = city.Length;
 
-Console.WriteLine(lastChar);
+//Console.WriteLine(wordLength);
+//Console.WriteLine(wordLength2);
 
-//Tuscios eilutes
+//string city1 = "T";
+//string city2 = "CodeAcademy";
+//char myChar = city2[1];
+//char myChar1 = city1[0];
+//Console.WriteLine(myChar);
+//Console.WriteLine(myChar1);
 
-string word1 = "";
-string word2;
+//int lastIndex = city2.Length - 1;
 
-//Replace
-string word3 = "mama";
-string word4 = word3.Replace("m", "p");
-Console.WriteLine(word4+" "+word3);
+//char lastChar = city2[city2.Length-1];
 
-//Uzduotys
+//Console.WriteLine(lastChar);
+
+////Tuscios eilutes
+
+//string word1 = "";
+//string word2;
+
+////Replace
+//string word3 = "mama";
+//string word4 = word3.Replace("m", "p");
+//Console.WriteLine(word4+" "+word3);
+
+////Uzduotys
 
 string ConsoleOutuput = Console.ReadLine();
 int number = ConsoleOutuput.Length;
