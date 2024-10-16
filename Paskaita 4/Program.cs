@@ -120,6 +120,7 @@
 Console.WriteLine("įveskite specialybę");
 string prof = Console.ReadLine().ToLower();
 double extraPoint = 1.5d;
+double mainPoint = 0;
 switch (prof)
 {
     case "matematika":
@@ -134,13 +135,95 @@ switch (prof)
             {
                 < 7 => 5,
                 >= 7 and <= 8 => 6,
-                > 8 and <10 => 7,
-               _ => 0
+                > 8 and < 10 => 7,
+                _ => 0
             };
-            Console.WriteLine(point1);
+            int point2 = egz switch
+            {
+                < 50 => 5,
+                >= 70 and <= 80 => 6,
+                > 80 and < 100 => 7,
+                _ => 0
+            };
+            if (userInput == "T")
+            {
+                mainPoint = point1 + point2 + extraPoint;
+            }
+            Console.WriteLine(mainPoint);
             break;
-         };
+        };
+    case "biologija":
+        {
+            Console.WriteLine("įveskite metinį vidurkį");
+            int vid = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("įveskite biologijos egzamino rezultatą procentais");
+            int egz = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ar dalyvavai olimpiadoje T/N");
+            string userInput = Console.ReadLine();
+            int point1 = vid switch
+            {
+                < 7 => 5,
+                >= 7 and <= 8 => 6,
+                > 8 and < 10 => 7,
+                _ => 0
+            };
+            int point2 = egz switch
+            {
+                < 50 => 5,
+                >= 70 and <= 80 => 6,
+                > 80 and < 100 => 7,
+                _ => 0
+            };
+            if (userInput == "T")
+            {
+                mainPoint = point1 + point2 + extraPoint;
+            }
+            Console.WriteLine(mainPoint);
+            break;
+        };
+    case "fizika":
+        {
+            Console.WriteLine("įveskite metinį vidurkį");
+            int vid = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("įveskite fizikos egzamino rezultatą procentais");
+            int egz = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ar dalyvavai olimpiadoje T/N");
+            string userInput = Console.ReadLine();
+            int point1 = vid switch
+            {
+                < 7 => 5,
+                >= 7 and <= 8 => 6,
+                > 8 and < 10 => 7,
+                _ => 0
+            };
+            int point2 = egz switch
+            {
+                < 50 => 5,
+                >= 70 and <= 80 => 6,
+                > 80 and < 100 => 7,
+                _ => 0
+            };
+            if (userInput == "T")
+            {
+                mainPoint = point1 + point2 + extraPoint;
+            }
+            Console.WriteLine(mainPoint);
+            break;
+    default:
+    Console.WriteLine(mainPoint);
+    break;
+
+        };
 }
+string result2 = mainPoint switch
+{
+   < 11.5 => "Maži šansai",
+   >12 and <14 => "Vidutiniai šansai",
+    > 14 => "Dideli šansai",
+    _ => " "
+};
+Console.WriteLine(result2);
+
 
 
 
@@ -160,12 +243,12 @@ switch (prof)
 //        if (userInput == "T")
 //        {
 
-     
+
 //        }
 //}
 
 
-    
+
 
 
 
